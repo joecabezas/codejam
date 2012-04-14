@@ -1,18 +1,6 @@
-var fs = require('fs');
-var filepath = process.argv[2];
-var input;
+require('../InputLoader').InputLoader(init.bind(this));
 
-fs.readFile(filepath, 'utf8', onReadData);
-function onReadData(err, data)
-{
-	if(err)
-		console.error(err);
-
-	input = data.split('\n');
-	init();
-}
-
-function init()
+function init(imput)
 {
 	//console.log(input);
 
